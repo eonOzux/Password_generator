@@ -1,20 +1,26 @@
-var character = ['a' ,'b', 'c', 'd','e', 'f', 'g', 'h', 'i', 'j','k', 'l', 'm', 'n', 'o',
- 'p', 'q', 'r', 's', 't', 'i', 'u', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-var spec_character = ['*', '/', '-', '+', ':', '?', '&', '%', '^', '#', '@', '!'];
-const combinedValues = character + spec_character; 
-const randomValues = [];
-
-document.write(randomSelected);
-var password = '';
-
-function passGen(password,randomValues) {
-
-    password = character + spec_character;
-    console.log(i);
-};
-
-
 // probando codigo de chat 
 
+// Pide al usuario la longitud deseada para la contraseña
+const passwordLength = parseInt(prompt('How many characters would you like your new password to be?'));
+
+// Definir los caracteres posibles para la contraseña
+const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+// Variable para almacenar la contraseña generada
+var newPassword = '';
+
+// Generar la contraseña usando un ciclo for
+for (let i = 0; i < passwordLength; i++) {
+    // Generar un índice aleatorio para seleccionar un carácter de la lista
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    
+    // Agregar el carácter seleccionado a la contraseña
+    newPassword += characters.charAt(randomIndex);
+// Escribe la contraseña en la pagina
+}
+
+// Imprimir la contraseña generada
+console.log('Your new password is:', newPassword);
+document.write('Your new password is: ', newPassword);
 
 // Ejemplo de uso
